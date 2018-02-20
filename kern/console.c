@@ -192,6 +192,9 @@ cga_putc(int c)
 	}
 
 	// What is the purpose of this?
+    //
+    // Answer: This clears the screen by shifting all previous output
+    // upward, i.e. terminal scrolling.
 	if (crt_pos >= CRT_SIZE) {
 		int i;
 
